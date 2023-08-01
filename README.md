@@ -4,7 +4,7 @@ A project that simulates a vacuum cleaning robot in different environments.
 The robot has two wheels. For each wheel the speed can be regulated individually. In this way the robot can move left and right. The speed of each wheel is displayed on the robot.
 The robot is also equiped with 12 distance sensors that measure the distance to the walls around it when close enough.
 
-![alt text](robot-example.png)
+<img src="robot-example.png" width=25% height=25%>
 
 ## The code
 Run the main function in `playground.py` to start the simulator.
