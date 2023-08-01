@@ -35,7 +35,6 @@ class Robot:
         self.update_sensors()
 
     def update_score(self):
-        # for i in range(len(self.circles) - 2):
         polygon = cascaded_union(self.circles[:-2])
         intersection = polygon.intersection(self.circles[-1]).area
         self.score += (self.circles[-1].area - intersection)
@@ -43,13 +42,7 @@ class Robot:
     def update_sensors(self):
         # update coordinates of sensors after robot has moved
         sensors = []
-        # for sensor_id in range(self.num_sensors):
-        #     angle = (sensor_id + 1) * 360 / self.num_sensors
-        #     length_sensor_line = self.radius + self.max_sensor_reach
-        #     radians = math.atan2((self.orientation[1] - self.y), (self.orientation[0] - self.x))
-        #     x_sensor = self.x + length_sensor_line * math.cos(angle * math.pi / 180 + radians)
-        #     y_sensor = self.y + length_sensor_line * math.sin(angle * math.pi / 180 + radians)
-        #     sensors.append((x_sensor, y_sensor))
+
         for sensor_id in range(self.num_sensors):
             angle = (sensor_id + 1) * 360 / self.num_sensors
             length_sensor_line = self.radius + self.max_sensor_reach

@@ -132,7 +132,7 @@ if __name__ == '__main__':
 
     # initialize timer in order to provide constant timer-events
     timer_event = pygame.USEREVENT + 1
-    time = 250  #TODO: fine-tuning
+    time = 250
     pygame.time.set_timer(timer_event, time)
 
     # run animation
