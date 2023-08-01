@@ -28,7 +28,7 @@ def draw_walls(screen, walls, wall_thickness, wall_color):
                          start_pos=bottom_wall[0],
                          end_pos=bottom_wall[1])
                          
-                         
+
 def draw_robot(screen, robot, robot_color, distance_values, draw_sensors=False):
     # body of robot
     pygame.draw.circle(surface=screen, color=robot_color, center=(robot.x, robot.y), radius=robot.radius)
@@ -107,8 +107,8 @@ if __name__ == '__main__':
     wall_color = (204, 0, 102)
 
     # robot
-    x = env_width / 3
-    y = env_height / 3
+    x = env_width / 5
+    y = env_height / 5
     v = 0.5
     v_max = 15
     radius = env_width / 20
@@ -183,8 +183,9 @@ if __name__ == '__main__':
                 robot.robot_is_crossing_wall(walls)
 
                 # sensor value update
-                robot.update_sensors()
+                # robot.update_sensors()
                 sensor_d = robot.get_sensor_distance_values(walls)
+                robot.update_sensors()
 
                 # clear screen
                 screen.fill((255, 255, 255))
